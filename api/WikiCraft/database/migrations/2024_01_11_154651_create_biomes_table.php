@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('biomes', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
             $table->string("wood");
             $table->string("spawn");
             $table->string("image");
