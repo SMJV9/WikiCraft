@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string("name"); 
             $table->string("drop");
-            $table->string("health");
-            $table->string("attack");
-            $table->string("xp");
+            $table->integer("health");
+            $table->integer("attack");
+            $table->integer("xp");
             $table->string("image");
             $table->timestamps();
         });
@@ -31,3 +31,6 @@ return new class extends Migration
         Schema::dropIfExists('mobs');
     }
 };
+/*
+INSERT INTO mobs (id, name, drop, health, attack, xp, image) VALUES (null, 'cow', 'leather', 10, 1, 1, 'https://th.bing.com/th/id/OIP.AfT_Ss8uW0v2RCflnQVwHQHaG4?rs=1&pid=ImgDetMain');
+*/

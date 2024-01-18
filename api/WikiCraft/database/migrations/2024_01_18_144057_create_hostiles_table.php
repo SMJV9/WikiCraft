@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string("name");
             $table->string("drop");
-            $table->string("health");
-            $table->string("attack");
-            $table->string("xp");   
+            $table->integer("health");
+            $table->integer("attack");
+            $table->integer("xp");   
             $table->string("image");
             $table->timestamps();
         });
@@ -31,3 +31,8 @@ return new class extends Migration
         Schema::dropIfExists('hostiles');
     }
 };
+/*
+INSERT INTO hostiles VALUES(null, 'Zombie', 'Rotten Flesh', 20, 2, 5, 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/4d/Zombie_JE2_BE2.png/revision/latest/scale-to-width/360?cb=20200217235933');
+
+*/
+
