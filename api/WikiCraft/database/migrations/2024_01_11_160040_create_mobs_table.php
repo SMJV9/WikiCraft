@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('mobs', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->string("category_id");
+            $table->string("name"); 
             $table->string("drop");
             $table->string("health");
             $table->string("attack");

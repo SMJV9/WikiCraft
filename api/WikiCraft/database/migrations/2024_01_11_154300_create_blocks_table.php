@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('blocks', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->integer("category_id");
             $table->string("funtion");
             $table->string("image");
             $table->timestamps();
