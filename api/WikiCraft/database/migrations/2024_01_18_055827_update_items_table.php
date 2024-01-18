@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('enchants', function (Blueprint $table) {
-            $table->id();
-            $table->double("dificulty");
-            $table->string("get");
-            $table->string("image");
-            $table->timestamps();
+        Schema::table('items', function (Blueprint $table) {
+            $table->string("image")->after("category_id");
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('enchants');
+        Schema::table('items', function (Blueprint $table) {
+            $table->dropColumn("image");
+        });
     }
 };
