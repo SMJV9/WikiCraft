@@ -45,6 +45,7 @@ INSERT INTO hostiles (id, name, loot, health, attack, xp, image) VALUES (null,'P
 INSERT INTO hostiles (id, name, loot, health, attack, xp, image) VALUES (null,'Piglin', 'Gold Nugget', 35, 9, 10, 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/6d/Piglin_JE2_BE2.png/revision/latest?cb=20191229160443');
 INSERT INTO hostiles (id, name, loot, health, attack, xp, image) VALUES (null,'Zoglin', 'Rotten Flesh', 40, 12, 14, 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/6d/Zoglin_JE2_BE2.png/revision/latest?cb=20191229160443');
 INSERT INTO hostiles (id, name, loot, health, attack, xp, image) VALUES (null,'Endermite', 'Ender Pearl', 10, 3, 2, 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/6d/Endermite_JE2_BE2.png/revision/latest?cb=20191229160443');
-
+INSERT INTO hostiles (id, name, loot, health, attack, xp, image) VALUES (null,'Zombie Villager', 'Rotten Flesh', 20, 5, 6, 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/6d/Zombie_Villager_JE2_BE2.png/revision/latest?cb=20191229160443');
+INSERT INTO hostiles (id, name, loot, health, attack, xp, image) VALUES (null,'Zombie', 'Rotten Flesh', 20, 5, 6, 'https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/6d/Zombie_Villager_JE2_BE2.png/revision/latest?cb=20191229160443');
 */
 

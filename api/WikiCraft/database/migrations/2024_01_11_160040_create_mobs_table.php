@@ -42,4 +42,14 @@ INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'donk
 INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'mule', 'leather', 15, 1, 1, 'https://th.bing.com/th/id/OIP.5Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3AHaHa?rs=1&pid=ImgDet&rs=1');
 INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'llama', 'leather', 15, 1, 1, 'https://th.bing.com/th/id/OIP.5Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3AHaHa?rs=1&pid=ImgDet&rs=1');
 INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'wolf', 'leather', 10, 1, 1, 'https://th.bing.com/th/id/OIP.5Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3AHaHa?rs=1&pid=ImgDet&rs=1');
+INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'ocelot', 'leather', 10, 1, 1, 'https://th.bing.com/th/id/OIP.5Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3AHaHa?rs=1&pid=ImgDet&rs=1');
+INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'fox', 'leather', 10, 1, 1, 'https://th.bing.com/th/id/OIP.5Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3AHaHa?rs=1&pid=ImgDet&rs=1');
+INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'polar bear', 'leather', 10, 1, 1, 'https://th.bing.com/th/id/OIP.2Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3AHaHa?rs=1&pid=ImgDet&rs=1');
+INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'panda', 'leather', 10, 1, 1, 'https://th.bing.com/th/id/OIP.2Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3AHaHa?rs=1&pid=ImgDet&rs=1');
+INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'parrot', 'leather', 10, 1, 1, 'https://th.bing.com/th/id/OIP.2Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3AHaHa?rs=1&pid=ImgDet&rs=1');
+INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'villager', 'emerald', 20, 1, 1, 'https://th.bing.com/th/id/OIP.2Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3AHaHa?rs=1&pid=ImgDet&rs=1');
+INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'iron golem', 'iron ingot', 50, 1, 1, 'https://th.bing.com/th/id/OIP.2Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3AHaHa?rs=1&pid=ImgDet&rs=1');
+INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'snow golem', 'snowball', 10, 1, 1, 'https://th.bing.com/th/id/OIP.2Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3AHaHa?rs=1&pid=ImgDet&rs=1');
+INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'zombie villager', 'rotten flesh', 20, 1, 1, 'https://th.bing.com/th/id/OIP.2Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3AHaHa?rs=1&pid=ImgDet&rs=1');
+INSERT INTO mobs (id, name, loot, health, attack, xp, image) VALUES (null, 'zombie', 'rotten flesh', 20, 1, 1, 'https://th.bing.com/th/id/OIP.2Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3AHaHa?rs=1&pid=ImgDet&rs=1');
 */
