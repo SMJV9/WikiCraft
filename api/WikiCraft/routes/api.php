@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/biomes',[BiomesController::class,'List']);
 Route::get('/biomes/{id}',[BiomesController::class,'item']);
+Route::post('/biomes/create',[BiomesController::class,'create']);

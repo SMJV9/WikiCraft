@@ -42,4 +42,27 @@ class biomescontroller extends Controller
         ];
         return response()->json($objet);
     }
+
+    public function create(Request $request){
+        $data = $request->validate([
+            'name' => 'required|min:3',
+            'wood' => 'required|min:3'
+        ]);
+    $biome = Biome::create([
+        'name'=> $data['name'],
+        'wood'=> $data['wood']
+    ]);
+    if($biome){
+        $objet =[
+            "response"=>'Sucess. Item saved correctly.',
+            "data"=> $biome
+        ];
+        return response()->json($objet);
+    } else {
+        $objet =[
+            "response"=> 'Error: Something went wrong, please try again.', 
+      ];
+        return response()->json($objet);
+    }
+    }
 }
