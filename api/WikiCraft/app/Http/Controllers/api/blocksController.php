@@ -85,7 +85,4 @@ class blocksController extends Controller
               return response()->json($objet);
           }
       }
-
-
-
 }
