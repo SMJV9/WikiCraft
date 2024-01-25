@@ -27,7 +27,6 @@ class biomescontroller extends Controller
         }
         return response()->json($list);
     }
-
     public function item($id){
         $biome = Biome::where('id','=', $id)->first();
        
@@ -42,7 +41,6 @@ class biomescontroller extends Controller
         ];
         return response()->json($objet);
     }
-
     public function create(Request $request){
         $data = $request->validate([
             'name' => 'required|min:3',
@@ -64,5 +62,29 @@ class biomescontroller extends Controller
       ];
         return response()->json($objet);
     }
+    }
+    public function update(Request $request){
+      $data = $request->validate([
+        'id'=>'required|min:1',
+          'name' => 'required|min:3',
+          'wood' => 'required|min:3'
+      ]);
+        $biome = Biome::where("id","=", $data['id'])->first();
+
+        $biome->name=$data['name'];
+        $biome->wood=$data['wood'];
+
+        if($biome->update()){
+            $objet =[
+                "response"=>'Sucess. Item update successfully.',
+                "data"=> $biome
+            ];
+            return response()->json($objet);
+        } else {
+            $objet =[
+                "response"=> 'Error: Something went wrong, please try again.', 
+          ];
+            return response()->json($objet);
+        }
     }
 }
