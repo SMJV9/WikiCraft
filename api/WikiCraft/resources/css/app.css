@@ -1,0 +1,141 @@
+body {
+    background: #303030 url("https://png.pngtree.com/background/20230611/original/pngtree-minecraft-castle-in-the-middle-of-the-mountains-picture-image_3136285.jpg") repeat-x 0 0;
+    background-size: cover;
+    animation: MinecraftBackground 165s linear infinite;
+    text-align: center;
+    font-family: Minecraft;
+    text-shadow: 0.2vw 0.2vw 0 #383838;
+    min-height: 100%;
+  }
+                        .center{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+  
+    .bcenter{
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    }
+  
+    .container{
+      height: 200px;
+      position: relative;
+      border: 3px;
+    }
+  html {
+    height: 100%;
+    overflow: hidden;
+  }
+  body {
+    background: #303030 url("/src/img/back.jpg") repeat-x 0 0;
+    background-size: cover;
+    animation: MinecraftBackground 165s linear infinite;
+    text-align: center;
+    font-family: Minecraft;
+    text-shadow: 0.2vw 0.2vw 0 #383838;
+    min-height: 100%;
+  }
+  main {
+    padding: 8% 30% 0 30%;
+  }
+  #logo {
+    margin-top: 5%;
+    width: 50%;
+  }
+  #flashingtext {
+    margin: -3.5% 0 0 47%;
+    width: 40%;
+    transform: rotate(-20deg);
+    animation: FlashingText 0.5s ease-in-out infinite;
+    color: #FFFF00;
+    font-size: 2vw;
+  }
+   @keyframes FlashingText {
+   0% {
+   transform: scale(1) rotate(-20deg);
+  }
+   50% {
+   transform: scale(1.05) rotate(-20deg);
+  }
+   100% {
+   transform: scale(1) rotate(-20deg);
+  }
+  }
+   @keyframes MinecraftBackground {
+   0% {
+  background-position: 0 0;
+  }
+   100% {
+  background-position: -4096px 0;
+  }
+  }
+  
+  .btn-minecraft {
+    background: #727272;
+    color: rgb(247, 247, 247);
+    width: 100%;
+    padding: .5rem 0;
+    margin-bottom: .75rem;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+    font-size: 1rem;
+    letter-spacing: .025em;
+    border: 2px solid rgba(0, 0, 0, 1);
+    box-shadow: inset 3px 3px 0 rgba(255, 255, 255, 0.5),
+                inset -3px -3px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  .btn-minecraft:hover {
+    background: rgba(115, 107, 221, 1);
+    background-color: #7079AA;
+    color: #f6f62c;
+  }
+  .btn-minecraft:focus {
+    color: rgb(246, 246, 44);
+    outline: none;
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    color:white; 
+    outline: black; 
+  }
+  .minecraft-block {
+    width: 150px;
+    height: 150px;
+    background: url('https://i.pinimg.com/564x/7a/77/33/7a77330edff779c619f76a1c431178ec.jpg') -10px -10px;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .left-column, .right-column {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .center-column {
+    flex: 3;
+    padding: 10px;
+  }
+  .minecraft-block {
+    position: relative;
+    /* Resto de estilos */
+  }
+  
+  .block-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 1em;
+  }

@@ -26,7 +26,7 @@ class itemsController extends Controller
         }
         return response()->json($list);
     }
-   public function item($id){
+    public function item($id){
     $item = Item::where('id','=',$id)->first();
 
     $objet =[
