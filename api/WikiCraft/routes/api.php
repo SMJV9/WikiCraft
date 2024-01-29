@@ -5,6 +5,8 @@ use App\Http\Controllers\api\biomesController;
 use App\Http\Controllers\api\BlocksController;
 use App\Http\Controllers\api\ItemsController;
 use App\Http\Controllers\api\HostilesController;
+use App\Http\Controllers\api\EnchantsController;
+use App\Http\Controllers\api\MobsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -33,3 +35,12 @@ Route::get('/hostiles/{id}',[HostilesController::class,'item']);
 Route::post('/hostiles/create',[HostilesController::class,'create']);
 Route::post('/hostiles/{id}/update',[HostilesController::class,'update']);
 // API de enchants
+Route::get('/enchants',[EnchantsController::class,'List']);
+Route::get('/enchants/{id}',[EnchantsController::class,'item']);
+Route::post('/enchants/create',[EnchantsController::class,'create']);
+Route::post('/enchants/{id}/update',[EnchantsController::class,'update']);
+// API de mobs
+Route::get('/mobs',[MobsController::class,'List']);
+Route::get('/mobs/{id}',[MobsController::class,'item']);
+Route::post('/mobs/create',[MobsController::class,'create']);
+Route::post('/mobs/{id}/update',[MobsController::class,'update']);
