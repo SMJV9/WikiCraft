@@ -5,7 +5,7 @@ use App\Models\Mob;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class mobsController extends Controller
+class MobController extends Controller
 {
         public function list(){
             $mobs = Mob::all();

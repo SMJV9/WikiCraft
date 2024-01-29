@@ -5,7 +5,7 @@ use App\Models\Item;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class itemsController extends Controller
+class ItemController extends Controller
 {
     public function list(){
         $items = Item::all();

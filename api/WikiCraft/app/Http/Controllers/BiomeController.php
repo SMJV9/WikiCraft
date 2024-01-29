@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
 
 
-class BiomesController extends Controller
+class BiomeController extends Controller
 {
 }

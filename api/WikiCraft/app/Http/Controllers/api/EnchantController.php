@@ -5,7 +5,7 @@ use App\Models\Enchant;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class enchantscontroller extends Controller
+class Enchantcontroller extends Controller
 {
     public function list(){
         $enchants = Enchant::all();

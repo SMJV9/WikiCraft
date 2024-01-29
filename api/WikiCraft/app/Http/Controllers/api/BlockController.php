@@ -5,7 +5,7 @@ use App\Models\Block;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class blocksController extends Controller
+class BlockController extends Controller
 {
     public function list(){
         $blocks = Block::all(); 

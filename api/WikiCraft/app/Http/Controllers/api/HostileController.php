@@ -5,7 +5,7 @@ use App\Models\Hostile;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class hostilescontroller extends Controller
+class Hostilecontroller extends Controller
 {
     public function list(){
         $hostiles = Hostile::all();

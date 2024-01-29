@@ -1,12 +1,11 @@
 <?php
 
-// use App\Http\Controllers\api\BiomesController;
-use App\Http\Controllers\api\biomesController;
-use App\Http\Controllers\api\BlocksController;
-use App\Http\Controllers\api\ItemsController;
-use App\Http\Controllers\api\HostilesController;
-use App\Http\Controllers\api\EnchantsController;
-use App\Http\Controllers\api\MobsController;
+use App\Http\Controllers\api\BiomeController;
+use App\Http\Controllers\api\BlockController;
+use App\Http\Controllers\api\ItemController;
+use App\Http\Controllers\api\HostileController;
+use App\Http\Controllers\api\EnchantController;
+use App\Http\Controllers\api\MobController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,33 +13,33 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-// API de biomes
-Route::get('/biomes',[BiomesController::class,'List']);
-Route::get('/biomes/{id}',[BiomesController::class,'item']);
-Route::post('/biomes/create',[BiomesController::class,'create']);
-Route::post('/biomes/{id}/update',[BiomesController::class,'update']);
-// API de blocks
-Route::get('/blocks',[BlocksController::class,'List']);
-Route::get('/blocks/{id}',[BlocksController::class,'item']);
-Route::post('/blocks/create',[BlocksController::class,'create']);
-Route::post('/blocks/{id}/update',[BlocksController::class,'update']);
-// API de items
-Route::get('/items',[ItemsController::class,'List']);
-Route::get('/items/{id}',[ItemsController::class,'item']);
-Route::post('/items/create',[ItemsController::class,'create']);
-Route::post('/items/{id}/update',[ItemsController::class,'update']);
-// API de hostiles
-Route::get('/hostiles',[HostilesController::class,'List']);
-Route::get('/hostiles/{id}',[HostilesController::class,'item']);
-Route::post('/hostiles/create',[HostilesController::class,'create']);
-Route::post('/hostiles/{id}/update',[HostilesController::class,'update']);
-// API de enchants
-Route::get('/enchants',[EnchantsController::class,'List']);
-Route::get('/enchants/{id}',[EnchantsController::class,'item']);
-Route::post('/enchants/create',[EnchantsController::class,'create']);
-Route::post('/enchants/{id}/update',[EnchantsController::class,'update']);
-// API de mobs
-Route::get('/mobs',[MobsController::class,'List']);
-Route::get('/mobs/{id}',[MobsController::class,'item']);
-Route::post('/mobs/create',[MobsController::class,'create']);
-Route::post('/mobs/{id}/update',[MobsController::class,'update']);
+// API de Biome
+Route::get('/Biomes',[BiomeController::class,'List']);
+Route::get('/Biomes/{id}',[BiomeController::class,'item']);
+Route::post('/Biomes/create',[BiomeController::class,'create']);
+Route::post('/Biomes/{id}/update',[BiomeController::class,'update']);
+// API de Block
+Route::get('/Blocks',[BlockController::class,'List']);
+Route::get('/Blocks/{id}',[BlockController::class,'item']);
+Route::post('/Blocks/create',[BlockController::class,'create']);
+Route::post('/Blocks/{id}/update',[BlockController::class,'update']);
+// API de Item
+Route::get('/Items',[ItemController::class,'List']);
+Route::get('/Items/{id}',[ItemController::class,'item']);
+Route::post('/Items/create',[ItemController::class,'create']);
+Route::post('/Items/{id}/update',[ItemController::class,'update']);
+// API de Hostile
+Route::get('/Hostiles',[HostileController::class,'List']);
+Route::get('/Hostiles/{id}',[HostileController::class,'item']);
+Route::post('/Hostiles/create',[HostileController::class,'create']);
+Route::post('/Hostiles/{id}/update',[HostileController::class,'update']);
+// API de Enchant
+Route::get('/Enchants',[EnchantController::class,'List']);
+Route::get('/Enchants/{id}',[EnchantController::class,'item']);
+Route::post('/Enchants/create',[EnchantController::class,'create']);
+Route::post('/Enchants/{id}/update',[EnchantController::class,'update']);
+// API de Mob
+Route::get('/Mobs',[MobController::class,'List']);
+Route::get('/Mobs/{id}',[MobController::class,'item']);
+Route::post('/Mobs/create',[MobController::class,'create']);
+Route::post('/Mobs/{id}/update',[MobsController::class,'update']);
