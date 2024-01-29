@@ -42,4 +42,4 @@ Route::post('/Enchants/{id}/update',[EnchantController::class,'update']);
 Route::get('/Mobs',[MobController::class,'List']);
 Route::get('/Mobs/{id}',[MobController::class,'item']);
 Route::post('/Mobs/create',[MobController::class,'create']);
-Route::post('/Mobs/{id}/update',[MobsController::class,'update']);
+Route::post('/Mobs/{id}/update',[MobController::class,'update']);
