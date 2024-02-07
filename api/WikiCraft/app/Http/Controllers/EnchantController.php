@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class EnchantController extends Controller
 {
-    
+    public function index(){
+        return view('Enchants.enchant');
+
+    }
 }
