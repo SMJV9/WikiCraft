@@ -10,6 +10,5 @@ class BiomeController extends Controller
 {
     public function index(){
         return view('Biomes.biomes');
-
     }
 }

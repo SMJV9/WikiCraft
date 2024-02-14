@@ -9,9 +9,9 @@
     </div>
     <div class="menu">
       <button class="btn-minecraft" style="width: 400px">Encantamientos personalizados</button>
-      <button class="btn-minecraft" style="width: 400px"></button>
-      <button class="btn-minecraft" style="width: 400px">Opciones..</button>
       <button class="btn-minecraft" style="width: 400px">Trucos extra</button>
+      <button class="btn-minecraft" style="width: 400px">Opciones..</button>
+      <button class="btn-minecraft" style="width: 400px"href="admin">Admin</button>
     </div>
     <img alt="Minecraft" id="logo" src="https://th.bing.com/th/id/R.91e5b9b071a92999b5c7557fba962a06?rik=HRquuLlUVSn%2fzA&pid=ImgRaw&r=0"/>
     <div id="flashingtext">¿Conoces todo sobre Minecraft?</div>
