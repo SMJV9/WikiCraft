@@ -10,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BiomeController;
 use App\Http\Controllers\BlockController;
+use App\Http\Controllers\LoginController;
 
 Route::get('/old', function () {
     return view('welcome');

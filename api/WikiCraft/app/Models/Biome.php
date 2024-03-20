@@ -14,4 +14,5 @@ class Biome extends Model
         'spawn',
         'image',
     ];
+
 }

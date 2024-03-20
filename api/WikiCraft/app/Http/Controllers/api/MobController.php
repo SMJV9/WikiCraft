@@ -14,6 +14,7 @@ class MobController extends Controller
 
             foreach($mobs as $mob){
                 $objet =[
+
                     "id" => $mob->id,
                     "name" => $mob->name,
                     "loot" => $mob->loot,
@@ -32,6 +33,7 @@ class MobController extends Controller
             $mob = Mob::where('id','=', $id)->first();
 
             $objet =[
+
                 "id" => $mob->id,
                 "name" => $mob->name,
                 "loot" => $mob->loot,
@@ -48,9 +50,9 @@ class MobController extends Controller
             $data = $request->validate([
                 'name' => 'required|min:3',
                 'loot' => 'required|min:3',
-                'health' => 'required|min:3',
-                'attack' => 'required|min:3',
-                'xp' => 'required|min:3',
+                'health' => 'required|min:1',
+                'attack' => 'required|min:1',
+                'xp' => 'required|min:1',
                 'image' => 'required|min:3'
             ]);
         $mob = Mob::create([
@@ -80,10 +82,10 @@ class MobController extends Controller
             'id'=>'required|min:1',
               'name' => 'required|min:3',
               'loot' => 'required|min:3',
-              'health' => 'required|min:3',
-              'attack' => 'required|min:3',
-              'xp' => 'required|min:3',
-              'image' => 'required|min:3'
+              'health' => 'required|min:1',
+              'attack' => 'required|min:1',
+              'xp' => 'required|min:1',
+              'image' => 'required|min:3',
           ]);
             $mob = Mob::where("id","=", $data['id'])->first();
 
@@ -94,17 +96,27 @@ class MobController extends Controller
             $mob->xp=$data['xp'];
             $mob->image=$data['image'];
 
-            if($mob->save()){
+            if($mob->update()){
                 $objet =[
-                    "response"=>'Sucess. Item updated correctly.',
+                    "response"=>'Sucess. Mob updated correctly.',
                     "data"=> $mob
                 ];
                 return response()->json($objet);
             } else {
                 $objet =[
-                    "response"=>'Error. Item not updated.',
+                    "response"=>'Error. Mob not updated.',
+                    "data"=> $mob
                 ];
                 return response()->json($objet);
+                
             }
+        }
+        public function delete($id){
+            $mob = Mob::findOrFail($id);
+            $mob->delete();
+    
+            return response()->json([
+                "response"=>'Sucess. Item deleted successfully.',
+            ]);
         }
 }

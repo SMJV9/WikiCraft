@@ -18,7 +18,7 @@ class Enchantcontroller extends Controller
                 "name" => $enchant->name,
                 "type" => $enchant->type, 
                 "description" => $enchant->description,
-                "min_level" => $enchant->max_level,
+                "min_level" => $enchant->min_level,
                 "max_level" => $enchant->max_level,
                 "image" => $enchant->image,
                 "created_at" => $enchant->created_at,
@@ -36,7 +36,7 @@ class Enchantcontroller extends Controller
             "name" => $enchant->name,
             "type" => $enchant->type, 
             "description" => $enchant->description,
-            "min_level" => $enchant->max_level,
+            "min_level" => $enchant->min_level,
             "max_level" => $enchant->max_level,
             "image" => $enchant->image,
             "created_at" => $enchant->created_at,
@@ -51,6 +51,7 @@ class Enchantcontroller extends Controller
             'description' => 'required|min:3',
             'min_level' => 'required|min:1',
             'max_level' => 'required|min:1',
+            'image' => 'required|min:3',
         ]);
     $enchant = Enchant::create([
         'name'=> $data['name'],
@@ -58,6 +59,7 @@ class Enchantcontroller extends Controller
         'description'=> $data['description'],
         'min_level'=> $data['min_level'],
         'max_level'=> $data['max_level'],
+        'image'=> $data['image']
     ]);
     if($enchant){
         $objet =[
@@ -81,6 +83,7 @@ class Enchantcontroller extends Controller
           'description' => 'required|min:3',
           'min_level' => 'required|min:1',
           'max_level' => 'required|min:1',
+          'image' => 'required|min:3'
       ]);
         $enchant = Enchant::where("id","=", $data['id'])->first();
 
@@ -89,6 +92,8 @@ class Enchantcontroller extends Controller
         $enchant->description=$data['description'];
         $enchant->min_level=$data['min_level'];
         $enchant->max_level=$data['max_level'];
+        $enchant->image=$data['image'];
+
 
         if($enchant->save()){
             $objet =[
@@ -99,8 +104,36 @@ class Enchantcontroller extends Controller
         } else {
             $objet =[
                 "response"=>'Error. Item not saved.',
+                "data"=> $enchant
             ];
             return response()->json($objet);
         }
+    }
+    public function delete($id){
+        $enchant = Enchant::findOrFail($id);
+        $enchant->delete();
+
+        return response()->json([
+            "response"=>'Sucess. Item deleted successfully.',
+        ]);
+    }
+    public function search(Request $request, $name) {
+        $enchant = Enchant::where('name', 'LIKE', '%' . $name . '%')->get();
+    
+        $list = $enchant->map(function ($enchant) {
+            return [
+                "id" => $enchant->id,
+                "name" => $enchant->name,
+                "type" => $enchant->type,
+                "description" => $enchant->description,
+                "min_level" => $enchant->min_level,
+                "max_level" => $enchant->max_level,
+                "image" => $enchant->image,
+                "created_at" => $enchant->created_at,
+                "updated_at" => $enchant->updated_at
+            ];
+        });
+    
+        return response()->json($list);
     }
 }

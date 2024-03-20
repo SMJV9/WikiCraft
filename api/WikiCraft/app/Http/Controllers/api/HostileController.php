@@ -12,17 +12,18 @@ class Hostilecontroller extends Controller
        
         $list = [];
 
-        foreach($hostiles as $hostile){
+        foreach($hostiles as $hostiles){
             $objet =[
 
-                "id" => $hostile->id,
-                "name" => $hostile->name,
-                "health" => $hostile->health,
-                "damage" => $hostile->damage,
-                "xp" => $hostile->xp, 
-                "image" => $hostile->image,
-                "created_at" => $hostile->created_at,
-                "updated_at" => $hostile->updated_at
+                "id" => $hostiles->id,
+                "name" => $hostiles->name,
+                "loot"  => $hostiles->loot,
+                "health" => $hostiles->health,
+                "attack" => $hostiles->attack,
+                "xp" => $hostiles->xp, 
+                "image" => $hostiles->image,
+                "created_at" => $hostiles->created_at,
+                "updated_at" => $hostiles->updated_at
             ];
             array_push($list, $objet);
         }
@@ -34,8 +35,9 @@ class Hostilecontroller extends Controller
         $objet =[
             "id" => $hostile->id,
             "name" => $hostile->name,
+            "loot"  => $hostile->loot,
             "health" => $hostile->health,
-            "damage" => $hostile->damage,
+            "attack" => $hostile->attack,
             "xp" => $hostile->xp, 
             "image" => $hostile->image,
             "created_at" => $hostile->created_at,
@@ -46,16 +48,20 @@ class Hostilecontroller extends Controller
     public function create(Request $request){
         $data = $request->validate([
             'name' => 'required|min:3',
+            'loot' => 'required|min:3', 
             'health' => 'required|min:1',
-            'damage' => 'required|min:1',
+            'attack' => 'required|min:1',
             'xp' => 'required|min:1',
+            'image' => 'required|min:3',
          
         ]);
     $hostile = Hostile::create([
         'name'=> $data['name'],
+        'loot'=> $data['loot'],
         'health'=> $data['health'],
-        'damage'=> $data['damage'],
+        'attack'=> $data['attack'],
         'xp'=> $data['xp'],
+        'image'=> $data['image'],
       
     ]);
     if($hostile){
@@ -76,15 +82,18 @@ class Hostilecontroller extends Controller
       $data = $request->validate([
         'id'=>'required|min:1',
           'name' => 'required|min:3',
+          'loot' => 'required|min:3', 
           'health' => 'required|min:1',
-          'damage' => 'required|min:1',
+          'attack' => 'required|min:1',
           'xp' => 'required|min:1',
+          'image' => 'required|min:3',
       ]);
         $hostile = Hostile::where("id","=", $data['id'])->first();
 
         $hostile->name=$data['name'];
+        $hostile->loot=$data['loot'];
         $hostile->health=$data['health'];
-        $hostile->damage=$data['damage'];
+        $hostile->attack=$data['attack'];
         $hostile->xp=$data['xp'];
         $hostile->image=$data['image'];
         $hostile->save();
@@ -101,5 +110,13 @@ class Hostilecontroller extends Controller
             ];
             return response()->json($objet);
         }
+    }
+    public function delete($id){
+        $hostile = Hostile::findOrFail($id);
+        $hostile->delete();
+
+        return response()->json([
+            "response"=>'Sucess. Item deleted successfully.',
+        ]);
     }
 }

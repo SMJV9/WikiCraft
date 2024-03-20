@@ -10,8 +10,9 @@ class Hostile extends Model
     use HasFactory;
     protected $fillable = [
         'name',
+        'loot',
         'health',
-        'damage',
+        'attack',
         'xp',
         'image',
     ];

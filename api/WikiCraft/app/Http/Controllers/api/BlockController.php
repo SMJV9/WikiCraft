@@ -42,11 +42,13 @@ class BlockController extends Controller
     public function create(Request $request){
         $data = $request->validate([
             'name'=>'required|min:3',
-            'funtion'=>'required|min:4'
+            'funtion'=>'required|min:4',
+            'image'=>'required|min:3',
         ]);
     $block = Block::create([
         'name'=>$data['name'],
-        'funtion'=>$data['funtion']
+        'funtion'=>$data['funtion'],
+        'image'=>$data['image'],
     ]);
     if($block){
         $objet =[
@@ -65,12 +67,14 @@ class BlockController extends Controller
         $data = $request->validate([
           'id'=>'required|min:1',
             'name' => 'required|min:3',
-            'funtion' => 'required|min:4'
+            'funtion' => 'required|min:4',
+            'image' => 'required|min:3',
         ]);
           $block = Block::where("id","=", $data['id'])->first();
   
           $block->name=$data['name'];
-          $block->wood=$data['wood'];
+          $block->funtion=$data['funtion'];
+            $block->image=$data['image'];
   
           if($block->update()){
               $objet =[
@@ -81,8 +85,17 @@ class BlockController extends Controller
           } else {
               $objet =[
                   "response"=> 'Error: Something went wrong, please try again.', 
+                  "data"=> $block
             ];
               return response()->json($objet);
           }
       }
+      public function delete($id){
+        $block = Block::findOrFail($id);
+        $block->delete();
+
+        return response()->json([
+            "response"=>'Sucess. Item deleted successfully.',
+        ]);
+    }
 }
