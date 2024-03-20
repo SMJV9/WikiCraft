@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::table('levels', function (Blueprint $table): void {
            
-            $table->integer('status')->default(1)->after('name');
+            
         });
     }
 
@@ -18,7 +18,7 @@ return new class extends Migration
     {
         Schema::table('levels', function (Blueprint $table): void {
            
-            $table->dropColumn('status');
+        
         });
     }
 };
