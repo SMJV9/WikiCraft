@@ -5,7 +5,7 @@ use App\Models\Biome;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class Biomecontroller extends Controller
+class BiomeController extends Controller
 {
     public function list(){
         $biomes = Biome::all();
