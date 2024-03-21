@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Hostilecontroller;
+use App\Http\Controllers\HostileController;
 use App\Http\Controllers\EnchantController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\MobController;
@@ -22,5 +22,5 @@ Route::get('/biomas',[BiomeController::class,'index'])->name('Biomes.biomes');
 Route::get('/bloques',[BlockController::class,'index'])->name('Blocks.blocks');
 Route::get('/encantamientos',[EnchantController::class,'index'])->name('Enchants.enchant');
 Route::get('/items',[ItemController::class,'index'])->name('Items.items');
-Route::get('/criaturashostiles',[Hostilecontroller::class,'index'])->name('Hostiles.hostiles');
+Route::get('/criaturashostiles',[HostileController::class,'index'])->name('Hostiles.hostiles');
 Route::get('/criaturas',[MobController::class,'index'])->name('Mobs.mobs');
