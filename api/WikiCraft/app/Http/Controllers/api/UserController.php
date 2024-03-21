@@ -46,7 +46,6 @@ class UserController extends Controller
             "email" => $User->email,
             "phone" => $User->phone,
             "email_verified_at" => $User->email_verified_at,
-      
             "image" => $User->image,
             "remember_token" => $User->remember_token
 
@@ -103,9 +102,6 @@ class UserController extends Controller
             'surname'=> 'required|min:3',
             'email'=> 'required|min:1',
             'phone'=> 'required|min:1',
-            'password'=> 'required|min:1',
-            'status'=> 'required|min:1',
-            'level_id'=> 'required|min:1',
             'image'=> 'required|min:1'
             
         ]);
@@ -116,9 +112,6 @@ class UserController extends Controller
         $user->surname=$data['surname'];
         $user->email=$data['email'];
         $user->phone=$data['phone'];
-        $user->password=$data['password'];
-        $user->status=$data['status'];
-        $user->level_id=$data['level_id'];
         $user->image=$data['image'];
         
         if($user->update()){
