@@ -46,9 +46,7 @@ class UserController extends Controller
             "email" => $User->email,
             "phone" => $User->phone,
             "email_verified_at" => $User->email_verified_at,
-          
-            "status" => $User->status, 
-            "level_id" => $User->level_id,
+      
             "image" => $User->image,
             "remember_token" => $User->remember_token
 
